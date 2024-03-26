@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>{% block title%}{% endblock %}</title>
+</head>
+<body>
+    <div class="topnav">
+        <a href="/">Home</a>
+        <a href="{{url_for('about')}}">About us</a>
+        <a href="{{url_for('employees')}}">Anställda</a>
+        <a href="{{url_for('question')}}">Fråga</a>
+        <a href="{{url_for('addemployee')}}">Add New</a>
+      </div>
+      
+      <div class="content">
+        {% block content %}
+
+        {% endblock %}
+      </div>
+      
+      <div class="footer">
+        <p>Footer</p>
+      </div>
+</body>
+</html>

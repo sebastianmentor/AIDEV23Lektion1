@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{%block title%}Anställd{%endblock%}
+
+{%block content%}
+
+<table>
+
+{% for employee in employees.values() %}
+    <tr>
+        <td>
+            {{employee['namn']}}
+        </td>
+        <td>
+            {{employee['alder']}}
+        </td>
+        <td>
+            {{employee['roll']}}
+        </td>
+        <td>
+            {{employee['erfarenhet_år']}}
+        </td>
+    </tr>
+{%endfor%}
+
+</table>
+
+{%endblock%}

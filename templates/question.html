@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{%block title%}Anställd{%endblock%}
+
+{%block content%}
+{% with messages = get_flashed_messages() %}
+   {% if messages %}
+      {% for message in messages %}
+         {{ message }}
+      {% endfor %}
+   {% endif %}
+{% endwith %}
+<h3>Din fråga var {{fråga}}</h3>
+
+<form action="{{url_for('question')}}" method="POST">
+    <label for="question">Fråga</label>
+    <input type="number" id="q" name="question" placeholder="Din fråga">
+</form>
+{%endblock%}

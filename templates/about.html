@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{%block title%}
+About us
+{%endblock%}
+
+{%block content%}
+<h1>About Us</h1>
+<p>Här är information om oss! Vi är {{antal}} anställda!</p>
+
+<img src ="/static/aistudenterSenior.webp" width="400px">
+
+{% for anställd in våra_anställda%}
+<p>{{anställd}}</p>
+{% endfor %}
+
+{%endblock%}

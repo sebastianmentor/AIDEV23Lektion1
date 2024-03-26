@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{%block title%}Anställd{%endblock%}
+
+{%block content%}
+    {% if finns %}
+        <table>
+            <tr>
+                <td>
+                    {{emp['namn']}}
+                </td>
+                <td>
+                    {{emp['alder']}}
+                </td>
+                <td>
+                    {{emp['roll']}}
+                </td>
+                <td>
+                    {{emp['erfarenhet_år']}}
+                </td>
+            </tr>
+        </table>
+    {% else %}
+    <table>
+        <tr>
+            <td>
+                Jon doe
+            </td>
+            <td>
+                101
+            </td>
+            <td>
+                Chef
+            </td>
+            <td>
+                0
+            </td>
+        </tr>
+    </table>
+    {% endif %}
+
+{%endblock%}

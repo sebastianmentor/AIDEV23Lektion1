@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{%block title%}Anställd{%endblock%}
+
+{%block content%}
+{% with messages = get_flashed_messages() %}
+   {% if messages %}
+      {% for message in messages %}
+         {{ message }}
+      {% endfor %}
+   {% endif %}
+{% endwith %}
+<h3>Din fråga var {{fråga}}</h3>
+
+<form action="{{url_for('addemployee')}}" method="POST">
+    <label for="namn">Namn</label>
+    <input id="namn" name="namn" placeholder="Ditt namn" required>
+
+    <label for="ålder">Namn</label>
+    <input id="ålder" name="ålder" placeholder="Din ålder" required>
+
+    <label for="roll">Namn</label>
+    <input id="roll" name="roll" placeholder="Roll" required>
+
+    <label for="erfarenhet">Namn</label>
+    <input id="erfarenhet" name="erfarenhet" placeholder="Ange antal år av erfarenhet" required>
+
+    <input type="submit">
+</form>
+{%endblock%}
