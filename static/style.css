@@ -34,7 +34,6 @@
   .content {
     background-color: #ddd;
     padding: 10px;
-    height: 200px; /* Should be removed. Only for demonstration */
   }
   
 
@@ -78,3 +77,16 @@ table {
     height: 40px; /* Höjd på footern, ändra efter behov */
   }
   
+
+  .klocka {
+    font-size: 48px; /* Storlek på texten för klockan */
+    color: #000; /* Textfärg */
+    background-color: #f1f1f1; /* Bakgrundsfärg */
+    border: 2px solid #000; /* Ramens färg och storlek */
+    padding: 20px; /* Inre marginaler */
+    width: 250px; /* Bredd på klockan */
+    text-align: center; /* Centrerar texten */
+    margin-top: 20px; /* Marginal ovanför klockan */
+    margin-left: auto; /* Centrerar klockan horisontellt */
+    margin-right: auto; /* Centrerar klockan horisontellt */
+}

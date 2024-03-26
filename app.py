@@ -18,7 +18,7 @@ def home_page():
 
 @app.route("/about")
 def about():
-    anställda = 11
+    anställda = len(ListOfPersons.get_list())
     global våra_anställda
     return render_template("about.html", antal = anställda, våra_anställda=våra_anställda)
 
@@ -85,6 +85,12 @@ def addperson():
 def listpersons():
     lista_av_personer = ListOfPersons.get_list()
     return render_template('listpersons.html', l = lista_av_personer)
+
+
+@app.route('/currentday')
+def currentday():
+    return render_template("currentday.html")
+
 
 if __name__ == '__main__':
     app.run(debug=True)

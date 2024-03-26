@@ -14,6 +14,7 @@
         <a href="{{url_for('employees')}}">Anställda</a>
         <a href="{{url_for('question')}}">Fråga</a>
         <a href="{{url_for('addemployee')}}">Add New</a>
+        <a href="{{url_for('currentday')}}">Nuvarande tid</a>
       </div>
       
       <div class="content">
@@ -25,5 +26,8 @@
       <div class="footer">
         <p>Footer</p>
       </div>
+
+      {% block scripts %}
+      {% endblock%}
 </body>
 </html>

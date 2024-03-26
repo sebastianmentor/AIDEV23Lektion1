@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+
+{%block title%}Home page{%endblock%}
+
+{%block content%}
+<div class="klocka" id="digitalKlocka">00:00:00</div>
+<script src="klocka.js"></script>
+{%endblock%}
+
+{% block scripts %}
+<script src="{{url_for('static', filename = 'script.js')}}"></script>
+{% endblock %}
